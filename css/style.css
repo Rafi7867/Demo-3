@@ -1,0 +1,180 @@
+.box{
+   min-height: 100px;
+    width: 400px;
+    margin: 10px auto;
+    background: red;
+    position: relative;
+}
+.box h1{
+    color: #fff;
+    padding:10px;
+}
+
+.ball{
+     height: 50px;
+    width: 50px;
+    background-color: green;
+    position: absolute;
+     right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+
+}
+
+.Effect-1{
+    position: relative;
+}
+
+.Effect-1 h1{
+    color:#fff;
+    font-weight: 800;
+        position: absolute;
+    bottom: 30%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%, 30%);
+    transition: all 2s linear;
+    opacity: 0;
+}
+
+.Effect-1:hover h1{
+    bottom:50%;
+    transform: translateY(0,50%);
+    opacity: 1;
+}
+
+
+.Effect-2{
+ transition: all 0.4s linear;
+}
+
+
+.Effect-2 img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin:auto;
+    margin-top: -70px;
+    transition: all 0.4s linear;
+}
+
+.Effect-2:hover img{
+    transform:scaleX(1.1);
+}
+
+.Effect-2:hover {
+transform: skewX(10deg);
+}
+
+.Effect-3{
+position: relative;
+}
+
+.Effect-3 img{
+    
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #33333387;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.4s linear;
+    transform: scale(0);
+}
+
+.Effect-3:hover .overlay{
+        opacity: 1;
+        transform: scale(1);
+}
+.Effect-3 h1{
+    position: absolute;
+    left:50%;
+    bottom:30%;
+    transform: translate(-50%,30%);
+    font-size: 15px;
+    color:#fff;
+    font-weight: 800;
+    transition: all 0.4s linear;
+    transform: scale(0);
+   
+}
+.Effect-3:hover h1{
+
+    bottom: 50%;
+ transform: translate(0,50%);
+  transform: scale(1);
+ 
+}
+
+.menu{}
+.menu li{
+
+}
+
+.menu li a{
+    display: block;
+    padding:10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333;
+}
+
+.menu li a::after{
+    content: ">>"
+}
+.menu li a::before{
+    content: "<<"
+}
+
+
+
+
+.menu2 {}
+.menu2  li{
+
+}
+
+.menu2  li a{
+    display: block;
+    padding:10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333;
+    position: relative;
+}
+
+.menu2  li a::after{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color:#333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -5px;
+    border-radius: 50%;
+}
+.menu2  li:last-child a::after{
+    width: 0;
+    height: 0;
+}
+.menu2  li a::before{
+    content: "";
+    position: absolute;
+    width:0%;
+    height: 3px;
+    background-color:#333;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+     transition: all 0.4s linear;
+}
+
+.menu2  li a:hover::before{
+     width:70%;
+}
